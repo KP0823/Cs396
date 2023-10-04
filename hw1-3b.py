@@ -1,10 +1,12 @@
 import codecs
 import hashlib
+
 key= b'TheQuickBrownFoxJumpsOverLazyDog!'
-def encode(key, days):
+date=21
+def encode(key,date):
     newKey = key
-    for i in range(days):
-        newKey = bytes.fromhex(hashlib.sha256(key).hexdigest()) + b'\x21'
+    for i in range(date):
+        nums=hashlib.sha256(key).hexdigest()
+        newKey = bytes.fromhex(nums)  +b'\x21'
     return codecs.encode(newKey, "hex")
-# Key was made 10/4 ... (25-4=21)
-print(encode(key, 21)) 
+print(encode(key, date)) 

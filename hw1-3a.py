@@ -16,52 +16,52 @@ def decrypt(ciphertexts):
       index+=2
     print("")
 
-  # key_5_10 = hex(int(ciphertexts[1][10:20], 16) ^ int(codecs.encode(b' the ',"hex"), 16))
-  # print(key_5_10)
-  # print(str(codecs.decode(key_5_10[2:],"hex")))
-  # print("")
+  key_5_10 = hex(int(ciphertexts[1][10:20], 16) ^ int(codecs.encode(b' the ',"hex"), 16))
+  print(key_5_10)
+  print(str(codecs.decode(key_5_10[2:],"hex")))
+  print("")
 
-  # for ciphertext in ciphertexts:
-  #   region_decode = hex(int(ciphertext[10:20],16) ^ int(key_5_10,16))[2:]
-  #   print(str(codecs.decode(region_decode,"hex")))
+  for ciphertext in ciphertexts:
+    region_decode = hex(int(ciphertext[10:20],16) ^ int(key_5_10,16))[2:]
+    print(str(codecs.decode(region_decode,"hex")))
 
-  # key_4_11 = hex(int(ciphertexts[5][8:22], 16) ^ int(codecs.encode(b' you are ',"hex"), 16))
-  # print(key_4_11)
-  # print(str(codecs.decode(key_4_11[2:],"hex")))
-  # print("")
+  key_4_11 = hex(int(ciphertexts[5][8:22], 16) ^ int(codecs.encode(b' you are ',"hex"), 16))
+  print(key_4_11)
+  print(str(codecs.decode(key_4_11[2:],"hex")))
+  print("")
 
-  # for ciphertext in ciphertexts:
-  #   region_decode = hex(int(ciphertext[8:22],16) ^ int(key_4_11,16))[2:]
-  #   print(str(codecs.decode(region_decode,"hex")))
+  for ciphertext in ciphertexts:
+    region_decode = hex(int(ciphertext[8:22],16) ^ int(key_4_11,16))[2:]
+    print(str(codecs.decode(region_decode,"hex")))
 
-  # key_3_11 = hex(int(ciphertexts[9][6:22], 16) ^ int(codecs.encode(b' we are ',"hex"), 16))
-  # print(key_3_11)
-  # print(str(codecs.decode(key_3_11[2:],"hex")))
-  # print("")
+  key_3_11 = hex(int(ciphertexts[9][6:22], 16) ^ int(codecs.encode(b' we are ',"hex"), 16))
+  print(key_3_11)
+  print(str(codecs.decode(key_3_11[2:],"hex")))
+  print("")
 
-  # for ciphertext in ciphertexts:
-  #   region_decode = hex(int(ciphertext[6:22],16) ^ int(key_3_11,16))[2:]
-  #   print(str(codecs.decode(region_decode,"hex")))
+  for ciphertext in ciphertexts:
+    region_decode = hex(int(ciphertext[6:22],16) ^ int(key_3_11,16))[2:]
+    print(str(codecs.decode(region_decode,"hex")))
 
-  # key_0_16 = hex(int(ciphertexts[0][0:32], 16) ^ int(codecs.encode(b'Testing testing ',"hex"), 16))
-  # print(key_0_16)
-  # print(str(codecs.decode(key_0_16[2:],"hex")))
-  # print("")
+  key_0_16 = hex(int(ciphertexts[0][0:32], 16) ^ int(codecs.encode(b'Testing testing ',"hex"), 16))
+  print(key_0_16)
+  print(str(codecs.decode(key_0_16[2:],"hex")))
+  print("")
 
-  # for ciphertext in ciphertexts:
-  #   region_decode = hex(int(ciphertext[0:32],16) ^ int(key_0_16,16))[2:]
-  #   print(str(codecs.decode(region_decode,"hex")))
+  for ciphertext in ciphertexts:
+    region_decode = hex(int(ciphertext[0:32],16) ^ int(key_0_16,16))[2:]
+    print(str(codecs.decode(region_decode,"hex")))
 
-  # key_0_33 = hex(int(ciphertexts[0][0:66], 16) ^ int(codecs.encode(b'Testing testing can you read this',"hex"), 16))
-  # print(key_0_33)
-  # print(str(codecs.decode(key_0_33[2:],"hex")))
-  # print("")
+  key_0_33 = hex(int(ciphertexts[0][0:66], 16) ^ int(codecs.encode(b'Testing testing can you read this',"hex"), 16))
+  print(key_0_33)
+  print(str(codecs.decode(key_0_33[2:],"hex")))
+  print("")
 
-  # for ciphertext in ciphertexts:
-  #   region_decode = hex(int(ciphertext[0:66],16) ^ int(key_0_33,16))[2:]
-  #   print(str(codecs.decode(region_decode,"hex")))
+  for ciphertext in ciphertexts:
+    region_decode = hex(int(ciphertext[0:66],16) ^ int(key_0_33,16))[2:]
+    print(str(codecs.decode(region_decode,"hex")))
 
-  # print("")
+  print("")
 
   english_key = b"TheQuickBrownFoxJumpsOverLazyDog!"
   hex_key = hex(int(codecs.encode(english_key, "hex"),16))
